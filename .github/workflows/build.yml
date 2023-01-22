@@ -16,5 +16,6 @@ jobs:
           date +"%T" > date.txt
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git commit -am "Updated Date"
+          git add --all
+          git commit -m "Updated Date"
           git push
