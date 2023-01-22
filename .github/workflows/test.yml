@@ -1,3 +1,4 @@
+name: Make date file
 on: push
 jobs:
   build:
