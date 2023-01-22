@@ -4,9 +4,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Use Checkout
       - uses: actions/checkout@v3
+      - name: Generate File
       - run: |
           date > generated.txt
+      - name: Push Changes
       - run: | 
           git config user.name github-actions
           git config user.email github-actions@github.com
