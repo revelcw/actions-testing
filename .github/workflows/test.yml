@@ -1,12 +1,15 @@
-name: Make date file
+name: Generate Date File
 on: push
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Generate File
       - run: |
           date > generated.txt
+      - name: Push Edits
+      - run: | 
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
