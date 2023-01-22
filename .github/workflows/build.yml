@@ -12,10 +12,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18.x
-      - run: |
-          date +"%T" > date.txt
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add --all
-          git commit -m "Updated Date"
-          git push
+      - run: date +"%T" > date.txt
+      - run: git config --local user.email "action@github.com"
+      - run: git config --local user.name "GitHub Action"
+      - run: git add --all
+      - run: git commit -m "Updated Date"
+      - run: git push
